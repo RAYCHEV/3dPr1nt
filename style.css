@@ -1,0 +1,101 @@
+/* Navbar and general styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* The navbar is above other content */
+}
+
+body {
+  padding-top: 20px; /* This value based on the height of the navbar */
+}
+
+section {
+  padding: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.about-me-image {
+  width: 200px;
+  height: 200px;
+}
+
+/* Card customization */
+.custom-card {
+  position: relative; /* Allows absolute positioning relative to the card */
+  padding: 10px;
+  border: 2px solid;
+  margin: 10px;
+}
+
+.card-label {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  background-color: white;
+  padding: 0 4px; /* Add some padding around the text */
+}
+
+/* Ensure input borders and other styles if needed */
+.card-body input {
+  border: none;
+}
+
+/* Project image styling */
+.project-image {
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.small-image {
+  height: 50px;
+}
+
+.expanded-image {
+  height: 300px;
+  z-index: 1050;
+  position: absolute;
+  background: white;
+  padding: 5px;
+  border: 2px solid black;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+/* Grid layout for images */
+.project-images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive grid */
+  gap: 10px; /* Space between the images */
+  justify-items: center; /* Center images within their grid cells */
+}
+
+@media (max-width: 600px) {
+  .project-images-container {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust grid for smaller screens */
+  }
+}
+
+/* Card styling for image and title alignment */
+.card {
+  display: flex;                /* Make the card body a flex container */
+  align-items: center;          /* Align items vertically in the center */
+  padding: 15px;                /* Add some padding around the card content */
+}
+
+.card-img-top {
+  width: 50px;                  /* Adjust image width as needed */
+  height: auto;                 /* Ensure the image maintains aspect ratio */
+  margin-right: 15px;           /* Add space between the image and the title */
+  flex-shrink: 0;               /* Prevent the image from shrinking */
+}
+
+.card-title {
+  margin: 0;                    /* Remove default margin */
+  text-align: left;             /* Align the text to the left */
+  font-size: 1.25rem;           /* Adjust the font size */
+}
