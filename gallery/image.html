@@ -19,6 +19,14 @@
             max-height: 90%;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const imgSrc = urlParams.get('src') || 'https://picsum.photos/600/400?random=1'; // Default image
+            const imgElement = document.getElementById('main-image');
+            imgElement.src = imgSrc;
+        });
+    </script>
 </head>
 <body>
     <header class="bg-primary text-white text-center py-3">
@@ -26,7 +34,7 @@
     </header>
     <main class="container my-4 text-center">
         <div class="fullscreen-img">
-            <img src="https://picsum.photos/600/400?random=1" alt="3D Print 1" class="img-fluid">
+            <img id="main-image" src="" alt="3D Print" class="img-fluid">
         </div>
     </main>
     <footer class="bg-light text-center py-3">

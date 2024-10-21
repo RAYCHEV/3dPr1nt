@@ -19,7 +19,11 @@
                 imgElement.alt = `3D Print ${i}`;
                 imgElement.className = 'img-fluid';
                 
-                colDiv.appendChild(imgElement);
+                const linkElement = document.createElement('a');
+                linkElement.href = `image.html?src=${encodeURIComponent(imgElement.src)}`;
+                linkElement.appendChild(imgElement);
+
+                colDiv.appendChild(linkElement);
                 gallery.appendChild(colDiv);
             }
         });
