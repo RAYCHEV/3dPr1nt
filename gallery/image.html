@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3DPr1nt.com Image</title>
+    <title>3dPr1nt.com Image</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const urlParams = new URLSearchParams(window.location.search);
@@ -16,16 +17,24 @@
     </script>
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-3">
-        <h1>3DPr1nt.com Image</h1>
+    <header class="bg-secondary text-white py-3 d-flex justify-content-between align-items-center">
+        <h1 class="ml-3">3dPr1nt.com</h1>
+        <div class="mr-3">
+            <a href="../index.html" class="btn btn-light">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="index.html" class="btn btn-light">
+                <i class="fas fa-arrow-left"></i> Back to Gallery
+            </a>
+        </div>
     </header>
     <main class="container my-4 text-center">
         <div class="fullscreen-img">
-            <img id="main-image" src="" alt="3D Print" class="img-fluid">
+            <img id="main-image" src="" alt="3dPr1nt.com" class="img-fluid">
         </div>
     </main>
     <footer class="bg-light text-center py-3">
-        <p>&copy; 2024 3DPr1nt.com Image Gallery. All rights reserved.</p>
+        <p>&copy; 2024 3dPr1nt.com Image Gallery. All rights reserved.</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
