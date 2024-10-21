@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Print Gallery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const gallery = document.getElementById('gallery');
+            
+            for (let i = 1; i <= 20; i++) {
+                const colDiv = document.createElement('div');
+                colDiv.className = 'col-md-4 mb-4';
+                
+                const imgElement = document.createElement('img');
+                imgElement.src = `https://picsum.photos/300/200?random=${i}`;
+                imgElement.alt = `3D Print ${i}`;
+                imgElement.className = 'img-fluid';
+                
+                colDiv.appendChild(imgElement);
+                gallery.appendChild(colDiv);
+            }
+        });
+    </script>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Welcome to the Gallery</h1>
+    </header>
+    <main class="container my-4">
+        <div class="row" id="gallery">
+            <!-- Gallery content will go here -->
+        </div>
+    </main>
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 3D Print Gallery. All rights reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

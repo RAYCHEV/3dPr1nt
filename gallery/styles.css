@@ -1,0 +1,8 @@
+/* styles.css */
+img.img-fluid {
+    transition: transform 0.3s ease;
+}
+
+img.img-fluid:hover {
+    transform: scale(1.1);
+}
