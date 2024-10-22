@@ -11,7 +11,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const urlParams = new URLSearchParams(window.location.search);
-            const imgSrc = urlParams.get('src') || 'https://picsum.photos/600/400?random=1'; // Default image
+            const imgSrc = urlParams.get('src') || 'images/1.jpg'; // Default image
             const imgElement = document.getElementById('main-image');
             imgElement.src = imgSrc;
         });
